@@ -30,12 +30,12 @@ class DashboardController extends Controller
         $totalWeight = WasteTransaction::where('user_id', $user->id)
             ->sum('weight');
 
-        $currentPoint = $user->current_point ?? 0;
+        $currentPoint = $user->total_point ?? 0;
         $rank = $user->rank;
 
         /*
         |--------------------------------------------------------------------------
-        | Rank System
+        | Rank Syste
         |--------------------------------------------------------------------------
         */
 
