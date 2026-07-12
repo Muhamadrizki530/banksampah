@@ -15,7 +15,7 @@ class DashboardController extends Controller
     public function index()
     {
         /** @var User $user */
-    $user = Auth::user();
+        $user = Auth::user();
 
         /*
         |--------------------------------------------------------------------------
@@ -30,8 +30,8 @@ class DashboardController extends Controller
         $totalWeight = WasteTransaction::where('user_id', $user->id)
             ->sum('weight');
 
-   $currentPoint = $user->current_point ?? 0;
-$rank = $user->rank;
+        $currentPoint = $user->current_point ?? 0;
+        $rank = $user->rank;
 
         /*
         |--------------------------------------------------------------------------
@@ -40,11 +40,11 @@ $rank = $user->rank;
         */
 
         $ranks = [
-            ['name' => 'Bronze',   'min' => 0],
-            ['name' => 'Silver',   'min' => 500],
-            ['name' => 'Gold',     'min' => 1000],
-            ['name' => 'Platinum', 'min' => 2000],
-            ['name' => 'Diamond',  'min' => 5000],
+            ['name' => 'Pemula',    'min' => 0],
+            ['name' => 'Aktif',     'min' => 500],
+            ['name' => 'Peduli',    'min' => 2000],
+            ['name' => 'Penggerak', 'min' => 5000],
+            ['name' => 'Pelopor',   'min' => 10000],
         ];
 
         $nextRank = null;
@@ -96,7 +96,7 @@ $rank = $user->rank;
             ],
         ]);
 
-                /*
+        /*
         |--------------------------------------------------------------------------
         | Aktivitas Terbaru
         |--------------------------------------------------------------------------
@@ -144,7 +144,7 @@ $rank = $user->rank;
 
         $achievements = $user->achievements()->get();
 
-                /*
+        /*
         |--------------------------------------------------------------------------
         | Return View
         |--------------------------------------------------------------------------

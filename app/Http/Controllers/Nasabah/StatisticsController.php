@@ -26,11 +26,11 @@ class StatisticsController extends Controller
         // Progress Rank
         // =========================
         $ranks = [
-            ['name' => 'Bronze', 'min' => 0],
-            ['name' => 'Silver', 'min' => 500],
-            ['name' => 'Gold', 'min' => 1500],
-            ['name' => 'Platinum', 'min' => 3000],
-            ['name' => 'Diamond', 'min' => 5000],
+            ['name' => 'Pemula',    'min' => 0],
+            ['name' => 'Aktif',     'min' => 500],
+            ['name' => 'Peduli',    'min' => 2000],
+            ['name' => 'Penggerak', 'min' => 5000],
+            ['name' => 'Pelopor',   'min' => 10000],
         ];
 
         $currentPoint = $user->current_point;
