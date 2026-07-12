@@ -12,7 +12,7 @@
         {{-- ============ 1. HEADER ============ --}}
         <header class="bsl-header d-flex align-items-center justify-content-between mb-4">
             <div>
-                <h1 class="bsl-greeting mb-1">Halo, {{ Auth::user()->name }} 👋</h1>
+                
                 <p class="bsl-date mb-0">
                     <i class="bi bi-calendar3 me-1"></i>
                     {{ \Carbon\Carbon::now()->translatedFormat('l, d F Y') }}
