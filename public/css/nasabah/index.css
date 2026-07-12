@@ -1,0 +1,501 @@
+:root {
+    --bsl-green: #2563eb;
+    --bsl-green-deep: #1d4ed8;
+    --bsl-green-soft: #eff6ff;
+    --bsl-ink: #14231a;
+    --bsl-muted: #6c7a72;
+    --bsl-gray-bg: #f5f7f6;
+    --bsl-line: rgba(20, 35, 26, 0.08);
+    --bsl-radius-lg: 24px;
+    --bsl-radius-md: 18px;
+    --bsl-shadow-soft: 0 12px 30px -18px rgba(20, 35, 26, 0.22);
+    --bsl-shadow-hover: 0 18px 36px -16px rgba(20, 35, 26, 0.28);
+}
+
+/* ---------- 2. Base ---------- */
+.bsl-dashboard {
+    background: var(--bsl-gray-bg);
+    color: var(--bsl-ink);
+    font-family:
+        "Poppins",
+        "Segoe UI",
+        -apple-system,
+        BlinkMacSystemFont,
+        sans-serif;
+    min-height: 100%;
+}
+
+/* ---------- 3. Header ---------- */
+.bsl-greeting {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--bsl-ink);
+}
+.bsl-date {
+    font-size: 0.9rem;
+    color: var(--bsl-muted);
+}
+.bsl-avatar-link {
+    display: block;
+}
+.bsl-avatar-img {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: var(--bsl-shadow-soft);
+}
+.bsl-avatar-fallback {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        145deg,
+        var(--bsl-green),
+        var(--bsl-green-deep)
+    );
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: var(--bsl-shadow-soft);
+    transition: transform 0.2s ease;
+}
+.bsl-avatar-link:hover .bsl-avatar-fallback,
+.bsl-avatar-link:hover .bsl-avatar-img {
+    transform: translateY(-2px) scale(1.03);
+}
+
+/* ---------- 4. Hero Card ---------- */
+.bsl-hero {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--bsl-radius-lg);
+    padding: 34px 36px;
+    background: linear-gradient(
+        135deg,
+        var(--bsl-green) 0%,
+        var(--bsl-green-deep) 100%
+    );
+    color: #fff;
+    box-shadow: 0 22px 44px -22px rgba(37, 99, 235, 0.55);
+}
+.bsl-hero-glow {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(
+            circle at 85% 0%,
+            rgba(255, 255, 255, 0.16) 0%,
+            transparent 45%
+        ),
+        radial-gradient(
+            circle at 0% 100%,
+            rgba(255, 255, 255, 0.1) 0%,
+            transparent 40%
+        );
+}
+.bsl-hero-label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 6px;
+}
+.bsl-hero-points {
+    font-size: 2.6rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    line-height: 1;
+}
+.bsl-hero-points .unit {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
+    margin-left: 6px;
+}
+.bsl-rank-badge {
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 100px;
+    padding: 6px 14px;
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+.bsl-hero-weight {
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+.bsl-progress-wrap {
+    max-width: 420px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.82rem;
+}
+.bsl-progress {
+    height: 8px;
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.22);
+}
+.bsl-progress .progress-bar {
+    background: #fff;
+    border-radius: 100px;
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.bsl-hero-illustration {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* ---------- 5. Quick Menu ---------- */
+.bsl-menu-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    background: #fff;
+    border-radius: var(--bsl-radius-md);
+    padding: 20px 10px;
+    box-shadow: var(--bsl-shadow-soft);
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+    text-align: center;
+    height: 100%;
+}
+.bsl-menu-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--bsl-shadow-hover);
+}
+.bsl-menu-card span {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--bsl-ink);
+}
+.bsl-menu-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: #fff;
+}
+.bg-menu-1 {
+    background: linear-gradient(145deg, #2563eb, #1d4ed8);
+}
+.bg-menu-2 {
+    background: linear-gradient(145deg, #ffb020, #f2932b);
+}
+.bg-menu-3 {
+    background: linear-gradient(145deg, #3aa0ff, #1e7fe0);
+}
+.bg-menu-4 {
+    background: linear-gradient(145deg, #ffc94d, #f2a93b);
+}
+.bg-menu-5 {
+    background: linear-gradient(145deg, #7a6cf0, #5a4cd9);
+}
+.bg-menu-6 {
+    background: linear-gradient(145deg, #6c7a72, #4b584f);
+}
+
+/* ---------- 6. Banner Informasi ---------- */
+.bsl-banner {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #fff;
+    border-radius: var(--bsl-radius-md);
+    padding: 14px 18px;
+    box-shadow: var(--bsl-shadow-soft);
+    border-left: 4px solid var(--bsl-green);
+}
+.bsl-banner-success {
+    border-left-color: var(--bsl-green);
+}
+.bsl-banner-info {
+    border-left-color: #3aa0ff;
+}
+.bsl-banner-warning {
+    border-left-color: #f2a93b;
+}
+.bsl-banner-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: var(--bsl-green-soft);
+    color: var(--bsl-green-deep);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1.05rem;
+}
+.bsl-banner-text {
+    flex: 1;
+    font-size: 0.9rem;
+    color: var(--bsl-ink);
+}
+.bsl-banner-close {
+    flex-shrink: 0;
+}
+
+/* ---------- 7. Generic Card ---------- */
+.bsl-card {
+    background: #fff;
+    border-radius: var(--bsl-radius-lg);
+    padding: 22px 24px;
+    box-shadow: var(--bsl-shadow-soft);
+}
+.bsl-card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.bsl-card-title {
+    font-size: 1.02rem;
+    font-weight: 700;
+    color: var(--bsl-ink);
+    margin: 0;
+}
+.bsl-see-all {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--bsl-green-deep);
+    text-decoration: none;
+}
+.bsl-see-all:hover {
+    text-decoration: underline;
+}
+
+/* ---------- 8. Timeline / Aktivitas ---------- */
+.bsl-timeline-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--bsl-line);
+}
+.bsl-timeline-item:last-child {
+    border-bottom: none;
+}
+.bsl-timeline-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+.bsl-timeline-icon.is-in {
+    background: var(--bsl-green-soft);
+    color: var(--bsl-green-deep);
+}
+.bsl-timeline-icon.is-out {
+    background: #fff3e0;
+    color: #f2932b;
+}
+.bsl-timeline-body {
+    flex: 1;
+    min-width: 0;
+}
+.bsl-timeline-title {
+    font-weight: 700;
+    font-size: 0.92rem;
+    color: var(--bsl-ink);
+}
+.bsl-timeline-sub {
+    font-size: 0.78rem;
+    color: var(--bsl-muted);
+    margin-top: 2px;
+}
+.bsl-timeline-point {
+    font-weight: 800;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+}
+
+.bsl-empty {
+    text-align: center;
+    padding: 30px 10px;
+    color: var(--bsl-muted);
+}
+.bsl-empty i {
+    font-size: 1.8rem;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* ---------- 9. Statistik Cards ---------- */
+.bsl-stat-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #fff;
+    border-radius: var(--bsl-radius-md);
+    padding: 18px 20px;
+    box-shadow: var(--bsl-shadow-soft);
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+}
+.bsl-stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--bsl-shadow-hover);
+}
+.bsl-stat-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    background: var(--bsl-green-soft);
+    color: var(--bsl-green-deep);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+.bsl-stat-icon.variant-b {
+    background: #e8f1ff;
+    color: #1e7fe0;
+}
+.bsl-stat-card small {
+    display: block;
+    color: var(--bsl-muted);
+    font-size: 0.76rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+.bsl-stat-card h3 {
+    margin: 2px 0 0;
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: var(--bsl-ink);
+}
+
+/* ---------- 10. Achievement Badges ---------- */
+.bsl-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+.bsl-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 84px;
+    text-align: center;
+}
+.bsl-badge-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #fff;
+    background: #c9d1cc;
+    transition: transform 0.18s ease;
+}
+.bsl-badge span {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--bsl-muted);
+}
+.bsl-badge:hover .bsl-badge-icon {
+    transform: translateY(-2px);
+}
+
+.bsl-badge.is-unlocked span {
+    color: var(--bsl-ink);
+}
+.bsl-badge.tier-bronze .bsl-badge-icon {
+    background: linear-gradient(145deg, #cd7f32, #a9662a);
+}
+.bsl-badge.tier-silver .bsl-badge-icon {
+    background: linear-gradient(145deg, #c0c0c0, #9a9a9a);
+}
+.bsl-badge.tier-gold .bsl-badge-icon {
+    background: linear-gradient(145deg, #ffd54d, #f2a93b);
+}
+.bsl-badge.is-locked .bsl-badge-icon {
+    background: #dce3df;
+    color: #9aa79f;
+}
+
+/* ---------- 11. Footer ---------- */
+.bsl-footer {
+    background: #fff;
+    border-top: 1px solid var(--bsl-line);
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 0.82rem;
+    color: var(--bsl-muted);
+}
+
+/* ---------- 12. Responsive ---------- */
+@media (max-width: 991.98px) {
+    .bsl-hero {
+        padding: 28px 24px;
+    }
+    .bsl-hero-points {
+        font-size: 2.1rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .bsl-greeting {
+        font-size: 1.25rem;
+    }
+    .bsl-hero-points {
+        font-size: 1.9rem;
+    }
+    .bsl-menu-icon {
+        width: 46px;
+        height: 46px;
+        font-size: 1.2rem;
+    }
+    .bsl-menu-card {
+        padding: 16px 6px;
+    }
+    .bsl-menu-card span {
+        font-size: 0.72rem;
+    }
+    .bsl-card {
+        padding: 18px 18px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .row-cols-3 > .col {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+    .bsl-badges {
+        justify-content: flex-start;
+    }
+    .bsl-badge {
+        width: 76px;
+    }
+}

@@ -1,0 +1,465 @@
+
+
+:root {
+    --stat-primary: #2563eb;
+    --stat-primary-light: #eff6ff;
+    --stat-primary-soft: #dbeafe;
+    --stat-green: #22c55e;
+    --stat-green-bg: #ecfdf3;
+    --stat-yellow: #eab308;
+    --stat-yellow-bg: #fef9e7;
+    --stat-purple: #a855f7;
+    --stat-purple-bg: #f5eeff;
+    --stat-bg: #f5f7fb;
+    --stat-text-dark: #1e293b;
+    --stat-text-muted: #64748b;
+    --stat-border: #e7ebf3;
+    --stat-radius-lg: 22px;
+    --stat-radius-md: 18px;
+    --stat-shadow: 0 4px 14px rgba(30, 41, 59, 0.05);
+    --stat-shadow-hover: 0 10px 24px rgba(30, 41, 59, 0.09);
+}
+
+/* Global font (in case layout does not already set it) */
+.stat-header,
+.stat-card,
+.chart-card,
+.progress-card,
+.history-card {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===================================================================
+   HEADER
+=================================================================== */
+.stat-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.stat-header-icon {
+    width: 54px;
+    height: 54px;
+    flex-shrink: 0;
+    border-radius: var(--stat-radius-md);
+    background-color: var(--stat-primary-light);
+    color: var(--stat-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.stat-header-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--stat-text-dark);
+    margin: 0;
+}
+
+.stat-header-subtitle {
+    font-size: 0.9rem;
+    color: var(--stat-text-muted);
+    margin: 2px 0 0;
+}
+
+/* ===================================================================
+   STAT CARDS (4 kartu ringkasan)
+=================================================================== */
+.stat-cards-row {
+    margin-bottom: 4px;
+}
+
+.stat-card {
+    background-color: #ffffff;
+    border: 1px solid var(--stat-border);
+    border-radius: var(--stat-radius-lg);
+    box-shadow: var(--stat-shadow);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    height: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--stat-shadow-hover);
+}
+
+.stat-card-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+.icon-blue {
+    background-color: var(--stat-primary-light);
+    color: var(--stat-primary);
+}
+
+.icon-green {
+    background-color: var(--stat-green-bg);
+    color: var(--stat-green);
+}
+
+.icon-yellow {
+    background-color: var(--stat-yellow-bg);
+    color: var(--stat-yellow);
+}
+
+.icon-purple {
+    background-color: var(--stat-purple-bg);
+    color: var(--stat-purple);
+}
+
+.stat-card-body {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.stat-card-label {
+    font-size: 0.78rem;
+    color: var(--stat-text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.stat-card-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--stat-text-dark);
+    margin: 2px 0 0;
+}
+
+.stat-card-value small {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--stat-text-muted);
+}
+
+/* ===================================================================
+   CHART CARDS
+=================================================================== */
+.stat-charts-row {
+    margin-top: 8px;
+}
+
+.chart-card {
+    background-color: #ffffff;
+    border: 1px solid var(--stat-border);
+    border-radius: var(--stat-radius-lg);
+    box-shadow: var(--stat-shadow);
+    padding: 22px;
+    height: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chart-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--stat-shadow-hover);
+}
+
+.chart-card-title {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--stat-text-dark);
+    margin-bottom: 16px;
+}
+
+.chart-wrapper {
+    position: relative;
+    height: 280px;
+    width: 100%;
+}
+
+.chart-wrapper-pie {
+    height: 280px;
+}
+
+/* ===================================================================
+   PROGRESS RANK CARD
+=================================================================== */
+.stat-progress-row {
+    margin-top: 8px;
+}
+
+.progress-card {
+    background-color: #ffffff;
+    border: 1px solid var(--stat-border);
+    border-radius: var(--stat-radius-lg);
+    box-shadow: var(--stat-shadow);
+    padding: 22px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.progress-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--stat-shadow-hover);
+}
+
+.progress-card-body {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.progress-rank-badge {
+    background-color: var(--stat-primary-soft);
+    color: var(--stat-primary);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 10px 18px;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+.progress-rank-bar-wrapper {
+    flex: 1 1 260px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 200px;
+}
+
+.rank-progress {
+    flex: 1;
+    height: 12px;
+    border-radius: 999px;
+    background-color: var(--stat-primary-light);
+    overflow: hidden;
+}
+
+.rank-progress .progress-bar {
+    background-color: var(--stat-primary);
+    border-radius: 999px;
+}
+
+.progress-rank-percentage {
+    font-weight: 600;
+    color: var(--stat-primary);
+    font-size: 0.9rem;
+    min-width: 40px;
+    text-align: right;
+}
+
+.progress-rank-note {
+    flex-basis: 100%;
+    margin: 10px 0 0;
+    font-size: 0.85rem;
+    color: var(--stat-text-muted);
+}
+
+.progress-rank-note strong {
+    color: var(--stat-text-dark);
+}
+
+/* ===================================================================
+   RIWAYAT RINGKAS (TABLE)
+=================================================================== */
+.stat-history-row {
+    margin-top: 8px;
+    margin-bottom: 24px;
+}
+
+.history-card {
+    background-color: #ffffff;
+    border: 1px solid var(--stat-border);
+    border-radius: var(--stat-radius-lg);
+    box-shadow: var(--stat-shadow);
+    padding: 22px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.history-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--stat-shadow-hover);
+}
+
+.history-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.history-see-all {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--stat-primary);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.history-see-all:hover {
+    text-decoration: underline;
+}
+
+.history-table {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+.history-table thead th {
+    color: var(--stat-text-muted);
+    font-weight: 500;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border-bottom: 1px solid var(--stat-border);
+    padding-bottom: 10px;
+}
+
+.history-table tbody td {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: var(--stat-text-dark);
+    border-bottom: 1px solid var(--stat-border);
+    vertical-align: middle;
+}
+
+.history-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.history-table tbody tr {
+    transition: background-color 0.15s ease;
+}
+
+.history-table tbody tr:hover {
+    background-color: var(--stat-primary-light);
+}
+
+.text-primary-custom {
+    color: var(--stat-primary) !important;
+}
+
+.badge-waste {
+    background-color: var(--stat-primary-light);
+    color: var(--stat-primary);
+    font-weight: 500;
+    font-size: 0.78rem;
+    padding: 6px 12px;
+    border-radius: 999px;
+}
+
+/* ===================================================================
+   EMPTY STATE
+=================================================================== */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 48px 20px;
+}
+
+.empty-state-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: var(--stat-primary-light);
+    color: var(--stat-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+}
+
+.empty-state-title {
+    font-weight: 600;
+    color: var(--stat-text-dark);
+    margin-bottom: 6px;
+}
+
+.empty-state-text {
+    font-size: 0.88rem;
+    color: var(--stat-text-muted);
+    max-width: 360px;
+    margin: 0;
+}
+
+/* ===================================================================
+   RESPONSIVE
+=================================================================== */
+@media (max-width: 991.98px) {
+    .chart-wrapper {
+        height: 240px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .stat-header {
+        gap: 12px;
+    }
+
+    .stat-header-icon {
+        width: 46px;
+        height: 46px;
+        font-size: 1.25rem;
+    }
+
+    .stat-header-title {
+        font-size: 1.25rem;
+    }
+
+    .stat-card {
+        padding: 16px;
+        gap: 10px;
+    }
+
+    .stat-card-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 1.1rem;
+    }
+
+    .stat-card-value {
+        font-size: 1.2rem;
+    }
+
+    .chart-card,
+    .progress-card,
+    .history-card {
+        padding: 16px;
+    }
+
+    .progress-card-body {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .progress-rank-bar-wrapper {
+        width: 100%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .stat-card-label {
+        font-size: 0.72rem;
+    }
+
+    .history-table {
+        font-size: 0.82rem;
+    }
+}
+
+/* body background (opsional jika belum diatur di layout utama) */
+body {
+    background-color: var(--stat-bg);
+}

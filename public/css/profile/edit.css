@@ -1,0 +1,230 @@
+:root{
+
+    /* Primary */
+    --primary:#2563eb;
+    --primary-dark:#1d4ed8;
+    --primary-light:#dbeafe;
+
+    /* Background */
+    --bg:#f5f7fb;
+    --bg-card:#ffffff;
+    --bg-light:#f8fafc;
+
+    /* Text */
+    --text:#1e293b;
+    --text-secondary:#334155;
+    --text-muted:#64748b;
+
+    /* Border */
+    --border:#e2e8f0;
+
+    /* Radius */
+    --radius:12px;
+    --radius-lg:18px;
+    --radius-xl:22px;
+
+    /* Shadow */
+    --shadow:0 10px 35px rgba(15,23,42,.06);
+}
+
+body{
+    background:var(--bg);
+    font-family:'Poppins',sans-serif;
+}
+
+/* ==========================
+   Wrapper
+========================== */
+
+.profile-wrapper{
+    background:var(--bg-card);
+    border-radius:var(--radius-xl);
+    padding:30px;
+    box-shadow:var(--shadow);
+}
+
+/* ==========================
+   Header
+========================== */
+
+.profile-header{
+    margin-bottom:28px;
+}
+
+.profile-header h3{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:0;
+    font-size:30px;
+    font-weight:700;
+    color:var(--text);
+}
+
+.profile-header h3 i{
+    color:var(--primary);
+}
+
+.profile-header p{
+    margin-top:6px;
+    color:var(--text-muted);
+    font-size:14px;
+}
+
+/* ==========================
+   Grid
+========================== */
+
+.profile-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
+    gap:24px;
+}
+
+/* ==========================
+   Card
+========================== */
+
+.profile-card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:var(--radius-lg);
+    overflow:hidden;
+}
+
+.card-header{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    padding:18px 24px;
+
+    background:var(--bg-light);
+    border-bottom:1px solid var(--border);
+
+    font-weight:700;
+    color:var(--text);
+}
+
+.card-header i{
+    color:var(--primary);
+}
+
+.card-body{
+    padding:28px;
+}
+
+/* ==========================
+   Form
+========================== */
+
+.profile-card form{
+    display:flex;
+    flex-direction:column;
+}
+
+.profile-card label{
+    display:block;
+    margin-bottom:8px;
+
+    font-size:14px;
+    font-weight:600;
+    color:var(--text);
+}
+
+.profile-card input,
+.profile-card textarea,
+.profile-card select{
+
+    width:100%;
+    height:48px;
+
+    padding:0 15px;
+
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+
+    transition:.25s;
+    background:#fff;
+
+    margin-bottom:22px;
+}
+
+.profile-card input:focus,
+.profile-card textarea:focus,
+.profile-card select:focus{
+
+    outline:none;
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.15);
+
+}
+
+/* ==========================
+   Button
+========================== */
+
+.profile-card button{
+
+    margin-top:10px;
+
+    background:var(--primary);
+    color:#fff;
+
+    border:none;
+    border-radius:var(--radius);
+
+    padding:12px 26px;
+
+    font-size:15px;
+    font-weight:600;
+
+    transition:.25s;
+
+    align-self:flex-start;
+
+    cursor:pointer;
+}
+
+.profile-card button:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================
+   Validation
+========================== */
+
+.profile-card .text-sm{
+    margin-top:6px;
+    margin-bottom:12px;
+}
+
+.profile-card .text-red-600{
+    color:#dc2626;
+}
+
+.profile-card .text-green-600{
+    color:#16a34a;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:768px){
+
+    .profile-grid{
+        grid-template-columns:1fr;
+    }
+
+    .card-body{
+        padding:22px;
+    }
+
+}

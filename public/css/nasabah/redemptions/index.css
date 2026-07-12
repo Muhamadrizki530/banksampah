@@ -1,0 +1,365 @@
+
+
+    :root{
+        --tp-primary: #2563eb;
+        --tp-primary-dark: #1d4ed8;
+        --tp-text: #14231a;
+        --tp-text-muted: #8b98a3;
+        --tp-text-muted-2: #6c7a72;
+        --tp-border-color: rgba(20,35,26,.12);
+        --tp-border-color-light: rgba(20,35,26,.1);
+        --tp-border-color-lighter: rgba(20,35,26,.08);
+        --tp-border-color-input: rgba(20,35,26,.15);
+        --tp-orange: #f2932b;
+        --tp-orange-bg: #fff3e0;
+        --tp-red: #f2554b;
+        --tp-gray-bg: #f5f7f6;
+        --tp-gray-bg-active: #e5e9e7;
+        --tp-white: #fff;
+        --tp-shadow-card: rgba(20,35,26,.22);
+        --tp-shadow-fab: rgba(37,99,235,.6);
+        --tp-focus-ring: rgba(37,99,235,.15);
+    }
+
+    /* ---------- Hero ---------- */
+    .tp-hero{
+        background:linear-gradient(135deg,var(--tp-primary),var(--tp-primary-dark)) !important;
+    }
+
+    /* ---------- Search Bar ---------- */
+    .tp-search-wrap{
+        position:relative;
+    }
+
+    .tp-search-wrap .bi-search{
+        position:absolute;
+        left:16px;
+        top:50%;
+        transform:translateY(-50%);
+        color:var(--tp-text-muted);
+    }
+
+    .tp-search-input{
+        padding-left:42px;
+        border-radius:100px;
+        border:1px solid var(--tp-border-color);
+        height:48px;
+    }
+
+    .tp-search-input:focus{
+        border-color:var(--tp-primary);
+        box-shadow:0 0 0 .2rem var(--tp-focus-ring);
+    }
+
+    /* ---------- Category Chips ---------- */
+    .tp-cat-scroll{
+        display:flex;
+        gap:8px;
+        overflow-x:auto;
+        padding-bottom:4px;
+    }
+
+    .tp-cat-chip{
+        flex-shrink:0;
+        border:1px solid var(--tp-border-color);
+        background:var(--tp-white);
+        color:var(--tp-text);
+        font-size:.82rem;
+        font-weight:600;
+        padding:8px 16px;
+        border-radius:100px;
+        cursor:pointer;
+        transition:.15s;
+        white-space:nowrap;
+    }
+
+    .tp-cat-chip.is-active,
+    .tp-cat-chip:hover{
+        background:var(--tp-primary);
+        border-color:var(--tp-primary);
+        color:var(--tp-white);
+    }
+
+    /* ---------- Sering Ditukar ---------- */
+    .tp-popular-scroll{
+        display:flex;
+        gap:14px;
+        overflow-x:auto;
+        padding-bottom:8px;
+    }
+
+    .tp-popular-card{
+        flex:0 0 160px;
+        background:var(--tp-white);
+        border-radius:16px;
+        box-shadow:0 12px 30px -18px var(--tp-shadow-card);
+        overflow:hidden;
+        text-decoration:none;
+        color:inherit;
+    }
+
+    .tp-popular-card img{
+        width:100%;
+        height:100px;
+        object-fit:cover;
+    }
+
+    .tp-popular-card .tp-popular-body{
+        padding:10px 12px;
+    }
+
+    .tp-popular-card .tp-popular-name{
+        font-size:.82rem;
+        font-weight:700;
+        margin-bottom:4px;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+    }
+
+    .tp-popular-fire{
+        color:var(--tp-orange);
+    }
+
+    /* ---------- Grocery Grid Card ---------- */
+    .tp-grocery-card img{
+        height:220px;
+        object-fit:cover;
+    }
+
+    .tp-grocery-card .card-title{
+        font-size:1.05rem;
+    }
+
+    .tp-empty-search{
+        display:none;
+    }
+
+    /* ---------- Qty Stepper ---------- */
+    .tp-qty-stepper{
+        display:flex;
+        align-items:stretch;
+        border:1px solid var(--tp-border-color-input);
+        border-radius:10px;
+        overflow:hidden;
+        height:36px;
+    }
+
+    .tp-qty-btn{
+        background:var(--tp-gray-bg);
+        border:none;
+        width:36px;
+        font-weight:700;
+        color:var(--tp-text);
+    }
+
+    .tp-qty-btn:active{
+        background:var(--tp-gray-bg-active);
+    }
+
+    .tp-qty-input{
+        border:none;
+        border-left:1px solid var(--tp-border-color-light);
+        border-right:1px solid var(--tp-border-color-light);
+        width:44px;
+        text-align:center;
+        font-weight:700;
+        -moz-appearance:textfield;
+    }
+
+    .tp-qty-input::-webkit-outer-spin-button,
+    .tp-qty-input::-webkit-inner-spin-button{
+        -webkit-appearance:none;
+        margin:0;
+    }
+
+    .tp-add-cart-btn{
+        background:var(--tp-orange-bg);
+        border:1px solid var(--tp-orange);
+        color:var(--tp-orange);
+        font-weight:700;
+    }
+
+    .tp-add-cart-btn:hover{
+        background:var(--tp-orange);
+        color:var(--tp-white);
+    }
+
+    /* ---------- Floating Cart Button ---------- */
+    .tp-cart-fab{
+        position:fixed;
+        bottom:22px;
+        right:22px;
+        width:58px;
+        height:58px;
+        border-radius:50%;
+        background:linear-gradient(135deg,var(--tp-primary),var(--tp-primary-dark));
+        color:var(--tp-white);
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:1.4rem;
+        box-shadow:0 14px 30px -10px var(--tp-shadow-fab);
+        border:none;
+        z-index:1040;
+    }
+
+    .tp-cart-badge{
+        position:absolute;
+        top:-4px;
+        right:-4px;
+        background:var(--tp-red);
+        color:var(--tp-white);
+        font-size:.68rem;
+        font-weight:800;
+        min-width:20px;
+        height:20px;
+        border-radius:50%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        padding:0 4px;
+        border:2px solid var(--tp-white);
+    }
+
+    /* ---------- Cart Offcanvas ---------- */
+    .tp-cart-offcanvas{
+        width:380px;
+        max-width:90vw;
+    }
+
+    .tp-cart-item{
+        display:flex;
+        gap:10px;
+        padding:12px 0;
+        border-bottom:1px solid var(--tp-border-color-lighter);
+    }
+
+    .tp-cart-item img{
+        width:64px;
+        height:64px;
+        object-fit:cover;
+        border-radius:10px;
+        flex-shrink:0;
+    }
+
+    .tp-cart-item-name{
+        font-weight:700;
+        font-size:.88rem;
+        margin-bottom:2px;
+    }
+
+    .tp-cart-item-price{
+        font-size:.8rem;
+        color:var(--tp-primary);
+        font-weight:700;
+    }
+
+    .tp-cart-remove{
+        color:var(--tp-red);
+        background:none;
+        border:none;
+        font-size:.9rem;
+    }
+
+    .tp-cart-empty{
+        text-align:center;
+        padding:40px 10px;
+        color:var(--tp-text-muted-2);
+    }
+
+    .tp-cart-footer{
+        border-top:1px solid var(--tp-border-color-lighter);
+        padding-top:14px;
+    }
+
+    /* =========================================================
+       MOBILE
+       ========================================================= */
+    @media (max-width: 767.98px){
+
+        .container.py-4{
+            padding-top:1rem !important;
+            padding-bottom:1rem !important;
+        }
+
+        .tp-hero .card-body{
+            padding:18px !important;
+        }
+
+        .tp-hero h2{
+            font-size:1.15rem;
+        }
+
+        .tp-hero h1{
+            font-size:1.5rem;
+        }
+
+        .tp-grocery-card img{
+            height:110px;
+        }
+
+        .tp-grocery-card .card-body{
+            padding:10px !important;
+        }
+
+        .tp-grocery-card .card-title{
+            font-size:.82rem;
+            margin-bottom:2px;
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
+        }
+
+        .tp-grocery-card .card-text.small{
+            display:none;
+        }
+
+        .tp-grocery-card .badge.fs-6{
+            font-size:.72rem !important;
+            padding:4px 8px;
+        }
+
+        .tp-grocery-card p.mb-3{
+            font-size:.75rem;
+            margin-bottom:8px !important;
+        }
+
+        .tp-qty-stepper{
+            height:32px;
+        }
+
+        .tp-qty-btn{
+            width:30px;
+            font-size:.8rem;
+        }
+
+        .tp-qty-input{
+            width:32px;
+            font-size:.8rem;
+        }
+
+        .tp-grocery-card .btn,
+        .tp-add-cart-btn{
+            font-size:.7rem;
+            padding:6px 4px;
+        }
+
+        .tp-popular-card{
+            flex:0 0 130px;
+        }
+
+        .tp-popular-card img{
+            height:80px;
+        }
+
+        .tp-cart-fab{
+            width:52px;
+            height:52px;
+            bottom:16px;
+            right:16px;
+            font-size:1.2rem;
+        }
+
+    }
+
