@@ -11,6 +11,27 @@ $redemption->created_at->format('Ymd') .
 str_pad($redemption->id, 6, '0', STR_PAD_LEFT);
 @endphp
 
+<style>
+    /* Cegah label di tabel info patah jadi 2 baris di layar sempit */
+    .struk-info-table td:first-child {
+        white-space: nowrap;
+        padding-right: 12px;
+        vertical-align: top;
+    }
+
+    .struk-info-table td:last-child {
+        text-align: right;
+        word-break: break-word;
+    }
+
+    @media (max-width: 576px) {
+        .struk-info-table td:first-child {
+            white-space: normal;
+            min-width: 110px;
+        }
+    }
+</style>
+
 <div class="container py-4">
 
     <div class="card border-0 shadow rounded-4">
@@ -55,32 +76,32 @@ str_pad($redemption->id, 6, '0', STR_PAD_LEFT);
                             Informasi Penukaran
                         </h5>
 
-                        <table class="table table-borderless mb-0">
+                        <table class="table table-borderless mb-0 struk-info-table">
 
                             <tr>
                                 <td>No. Transaksi</td>
-                                <td class="text-end fw-bold">
+                                <td class="fw-bold">
                                     {{ $trxNumber }}
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>Tanggal</td>
-                                <td class="text-end">
+                                <td>
                                     {{ $redemption->created_at->format('d F Y') }}
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>Jam</td>
-                                <td class="text-end">
+                                <td>
                                     {{ $redemption->created_at->format('H:i') }}
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>Status</td>
-                                <td class="text-end">
+                                <td>
                                     <span class="badge bg-success">
                                         Berhasil
                                     </span>
@@ -101,39 +122,39 @@ str_pad($redemption->id, 6, '0', STR_PAD_LEFT);
                             Data Nasabah
                         </h5>
 
-                        <table class="table table-borderless mb-0">
+                        <table class="table table-borderless mb-0 struk-info-table">
 
                             <tr>
                                 <td>Nama</td>
-                                <td class="text-end fw-bold">
+                                <td class="fw-bold">
                                     {{ $redemption->user->name }}
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>Email</td>
-                                <td class="text-end">
+                                <td>
                                     {{ $redemption->user->email }}
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>Poin Sebelum</td>
-                                <td class="text-end fw-bold">
+                                <td class="fw-bold">
                                     {{ number_format($redemption->point_before) }}
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>Poin Digunakan</td>
-                                <td class="text-end fw-bold text-danger">
+                                <td class="fw-bold text-danger">
                                     -{{ number_format($redemption->point_used) }}
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>Sisa Poin</td>
-                                <td class="text-end fw-bold text-success">
+                                <td class="fw-bold text-success">
                                     {{ number_format($redemption->point_after) }}
                                 </td>
                             </tr>
