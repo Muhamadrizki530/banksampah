@@ -16,8 +16,8 @@
     <div class="logo">
       <div class="logo-mark">
         <svg viewBox="0 0 32 32" fill="none">
-          <path d="M10 18C10 13 13 10 16 10C19 10 22 13 22 18" stroke="#EAFBF1" stroke-width="2.4" stroke-linecap="round"/>
-          <path d="M16 10V22" stroke="#B9FBDE" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M10 18C10 13 13 10 16 10C19 10 22 13 22 18" stroke="#EAF2FE" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M16 10V22" stroke="#BFDBFE" stroke-width="2.4" stroke-linecap="round"/>
         </svg>
       </div>
       <div class="logo-text">
@@ -56,19 +56,19 @@
   <svg class="hero-bg" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <radialGradient id="g1" cx="30%" cy="20%" r="70%">
-        <stop offset="0%" stop-color="#3EE39B" stop-opacity="0.5"/>
-        <stop offset="100%" stop-color="#3EE39B" stop-opacity="0"/>
+        <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.5"/>
+        <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
       </radialGradient>
       <radialGradient id="g2" cx="85%" cy="60%" r="60%">
-        <stop offset="0%" stop-color="#2AACC9" stop-opacity="0.55"/>
-        <stop offset="100%" stop-color="#2AACC9" stop-opacity="0"/>
+        <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.55"/>
+        <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
       </radialGradient>
     </defs>
     <rect width="1200" height="700" fill="url(#g1)"/>
     <rect width="1200" height="700" fill="url(#g2)"/>
-    <path d="M0 520C180 470 340 560 520 500C700 440 820 540 1000 480C1120 440 1160 470 1200 460V700H0V520Z" fill="#1B8F4C" fill-opacity="0.35"/>
-    <path d="M0 580C220 620 380 540 560 590C740 640 900 560 1080 610C1140 628 1170 615 1200 600V700H0V580Z" fill="#15703C" fill-opacity="0.55"/>
-    <g fill="#B9FBDE" fill-opacity="0.3">
+    <path d="M0 520C180 470 340 560 520 500C700 440 820 540 1000 480C1120 440 1160 470 1200 460V700H0V520Z" fill="#1D4ED8" fill-opacity="0.35"/>
+    <path d="M0 580C220 620 380 540 560 590C740 640 900 560 1080 610C1140 628 1170 615 1200 600V700H0V580Z" fill="#1E3A8A" fill-opacity="0.55"/>
+    <g fill="#BFDBFE" fill-opacity="0.3">
       <circle cx="140" cy="120" r="4"/><circle cx="260" cy="90" r="3"/><circle cx="1000" cy="150" r="4"/>
       <circle cx="920" cy="230" r="3"/><circle cx="500" cy="80" r="3"/><circle cx="700" cy="180" r="4"/>
     </g>
@@ -270,17 +270,17 @@
         <div class="carousel-track" id="carouselTrack">
 
           <div class="carousel-slide">
-            <div class="carousel-visual" style="background:linear-gradient(160deg,#1FAE64,#15703C);">
+            <div class="carousel-visual" style="background:linear-gradient(160deg,#2563EB,#1E3A8A);">
               <svg viewBox="0 0 400 340" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="330" cy="60" r="90" fill="#ffffff" fill-opacity="0.08"/>
                 <circle cx="40" cy="290" r="70" fill="#ffffff" fill-opacity="0.08"/>
-                <rect x="100" y="150" width="200" height="110" rx="10" fill="#EAFBF1"/>
-                <rect x="120" y="130" width="160" height="24" rx="6" fill="#B9FBDE"/>
-                <rect x="140" y="170" width="120" height="12" rx="6" fill="#1B8F4C" fill-opacity="0.35"/>
-                <rect x="140" y="192" width="90" height="12" rx="6" fill="#1B8F4C" fill-opacity="0.35"/>
-                <rect x="140" y="214" width="60" height="12" rx="6" fill="#1B8F4C" fill-opacity="0.35"/>
-                <circle cx="200" cy="100" r="30" fill="#B9FBDE"/>
-                <path d="M188 100l9 9 16-18" stroke="#15703C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <rect x="100" y="150" width="200" height="110" rx="10" fill="#EAF2FE"/>
+                <rect x="120" y="130" width="160" height="24" rx="6" fill="#BFDBFE"/>
+                <rect x="140" y="170" width="120" height="12" rx="6" fill="#1D4ED8" fill-opacity="0.35"/>
+                <rect x="140" y="192" width="90" height="12" rx="6" fill="#1D4ED8" fill-opacity="0.35"/>
+                <rect x="140" y="214" width="60" height="12" rx="6" fill="#1D4ED8" fill-opacity="0.35"/>
+                <circle cx="200" cy="100" r="30" fill="#BFDBFE"/>
+                <path d="M188 100l9 9 16-18" stroke="#1E3A8A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
               </svg>
             </div>
             <div class="carousel-copy">
@@ -295,15 +295,15 @@
           </div>
 
           <div class="carousel-slide">
-            <div class="carousel-visual" style="background:linear-gradient(160deg,#2AACC9,#1B8F4C);">
+            <div class="carousel-visual" style="background:linear-gradient(160deg,#38BDF8,#1D4ED8);">
               <svg viewBox="0 0 400 340" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="60" cy="70" r="80" fill="#ffffff" fill-opacity="0.08"/>
                 <circle cx="340" cy="270" r="100" fill="#ffffff" fill-opacity="0.08"/>
-                <rect x="90" y="120" width="220" height="150" rx="14" fill="#EAFBF1"/>
-                <circle cx="150" cy="180" r="26" fill="#2AACC9" fill-opacity="0.5"/>
-                <circle cx="210" cy="200" r="20" fill="#1FAE64" fill-opacity="0.6"/>
-                <circle cx="260" cy="170" r="16" fill="#15703C" fill-opacity="0.5"/>
-                <path d="M120 235h180" stroke="#1B8F4C" stroke-width="6" stroke-linecap="round" stroke-dasharray="2 14"/>
+                <rect x="90" y="120" width="220" height="150" rx="14" fill="#EAF2FE"/>
+                <circle cx="150" cy="180" r="26" fill="#38BDF8" fill-opacity="0.5"/>
+                <circle cx="210" cy="200" r="20" fill="#2563EB" fill-opacity="0.6"/>
+                <circle cx="260" cy="170" r="16" fill="#1E3A8A" fill-opacity="0.5"/>
+                <path d="M120 235h180" stroke="#1D4ED8" stroke-width="6" stroke-linecap="round" stroke-dasharray="2 14"/>
               </svg>
             </div>
             <div class="carousel-copy">
@@ -318,15 +318,15 @@
           </div>
 
           <div class="carousel-slide">
-            <div class="carousel-visual" style="background:linear-gradient(160deg,#15703C,#2AACC9);">
+            <div class="carousel-visual" style="background:linear-gradient(160deg,#1E3A8A,#38BDF8);">
               <svg viewBox="0 0 400 340" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="330" cy="90" r="90" fill="#ffffff" fill-opacity="0.08"/>
-                <rect x="80" y="140" width="240" height="24" rx="12" fill="#EAFBF1"/>
-                <rect x="80" y="140" width="150" height="24" rx="12" fill="#3EE39B"/>
-                <rect x="80" y="180" width="240" height="24" rx="12" fill="#EAFBF1"/>
-                <rect x="80" y="180" width="90" height="24" rx="12" fill="#2AACC9"/>
-                <rect x="80" y="220" width="240" height="24" rx="12" fill="#EAFBF1"/>
-                <rect x="80" y="220" width="190" height="24" rx="12" fill="#1FAE64"/>
+                <rect x="80" y="140" width="240" height="24" rx="12" fill="#EAF2FE"/>
+                <rect x="80" y="140" width="150" height="24" rx="12" fill="#3B82F6"/>
+                <rect x="80" y="180" width="240" height="24" rx="12" fill="#EAF2FE"/>
+                <rect x="80" y="180" width="90" height="24" rx="12" fill="#38BDF8"/>
+                <rect x="80" y="220" width="240" height="24" rx="12" fill="#EAF2FE"/>
+                <rect x="80" y="220" width="190" height="24" rx="12" fill="#2563EB"/>
               </svg>
             </div>
             <div class="carousel-copy">
@@ -341,12 +341,12 @@
           </div>
 
           <div class="carousel-slide">
-            <div class="carousel-visual" style="background:linear-gradient(160deg,#1B8F4C,#0F5C34);">
+            <div class="carousel-visual" style="background:linear-gradient(160deg,#1D4ED8,#172554);">
               <svg viewBox="0 0 400 340" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="70" cy="260" r="90" fill="#ffffff" fill-opacity="0.08"/>
-                <rect x="110" y="110" width="180" height="160" rx="16" fill="#EAFBF1"/>
-                <path d="M150 190l30 30 70-70" stroke="#1FAE64" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                <circle cx="200" cy="190" r="70" stroke="#B9FBDE" stroke-width="6" fill="none" stroke-dasharray="8 10"/>
+                <rect x="110" y="110" width="180" height="160" rx="16" fill="#EAF2FE"/>
+                <path d="M150 190l30 30 70-70" stroke="#2563EB" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <circle cx="200" cy="190" r="70" stroke="#BFDBFE" stroke-width="6" fill="none" stroke-dasharray="8 10"/>
               </svg>
             </div>
             <div class="carousel-copy">
