@@ -9,6 +9,7 @@
     --ink: #0f1f33;
     --muted: #5c6b80;
     --line: rgba(15, 31, 51, 0.1);
+    --header-h: 72px;
 }
 * {
     margin: 0;
@@ -369,11 +370,21 @@ nav {
 
 /* ===== SECTION generic ===== */
 section {
-    padding: 100px 0;
+    padding: 64px 0;
+}
+section[id] {
+    scroll-margin-top: var(--header-h);
+    min-height: calc(100vh - var(--header-h));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+section[id] > .wrap {
+    width: 100%;
 }
 .section-head {
     max-width: 600px;
-    margin-bottom: 56px;
+    margin-bottom: 36px;
 }
 .tag {
     font-size: 0.78rem;
@@ -520,7 +531,7 @@ section {
 .passbook-wrap {
     display: grid;
     grid-template-columns: 0.85fr 1.15fr;
-    gap: 56px;
+    gap: 40px;
     align-items: center;
 }
 @media (max-width: 860px) {
@@ -531,44 +542,44 @@ section {
 
 .passbook {
     background: var(--paper);
-    border-radius: 22px;
-    padding: 30px 28px;
+    border-radius: 20px;
+    padding: 22px 22px;
     color: var(--ink);
     box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.5);
     transform: rotate(-2deg);
-    max-width: 420px;
+    max-width: 400px;
 }
 .passbook-top {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     border-bottom: 2px dashed var(--line);
-    padding-bottom: 16px;
-    margin-bottom: 16px;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
 }
 .passbook-top .brand {
     font-family: "Space Grotesk", sans-serif;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 0.96rem;
     color: var(--forest);
 }
 .passbook-top .brand span {
     display: block;
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     font-weight: 500;
     color: var(--muted);
     margin-top: 2px;
 }
 .passbook-top .no {
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     color: var(--muted);
     text-align: right;
 }
 .ledger-row {
     display: flex;
     justify-content: space-between;
-    font-size: 0.88rem;
-    padding: 10px 0;
+    font-size: 0.85rem;
+    padding: 8px 0;
     border-bottom: 1px solid var(--line);
 }
 .ledger-row .item {
@@ -579,7 +590,7 @@ section {
     display: block;
     font-weight: 400;
     color: var(--muted);
-    font-size: 0.76rem;
+    font-size: 0.74rem;
 }
 .ledger-row .price {
     color: var(--leaf);
@@ -590,16 +601,16 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-top: 18px;
-    padding-top: 14px;
+    margin-top: 14px;
+    padding-top: 10px;
 }
 .passbook-total .lbl {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     color: var(--muted);
 }
 .passbook-total .val {
     font-family: "Space Grotesk", sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: var(--forest);
 }
@@ -607,7 +618,7 @@ section {
 .harga-list {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 10px;
 }
 .harga-item {
     display: flex;
@@ -615,8 +626,8 @@ section {
     align-items: center;
     background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(255, 255, 255, 0.14);
-    border-radius: 14px;
-    padding: 16px 20px;
+    border-radius: 12px;
+    padding: 12px 18px;
 }
 .harga-item .name {
     font-weight: 600;
@@ -637,12 +648,12 @@ section {
 .reward-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
+    gap: 16px;
 }
 .reward-card {
     background: var(--mint);
-    border-radius: 20px;
-    padding: 26px 24px;
+    border-radius: 18px;
+    padding: 18px 18px;
     border: 1px solid var(--line);
     transition:
         transform 0.18s ease,
@@ -653,40 +664,40 @@ section {
     box-shadow: 0 16px 30px -18px rgba(15, 31, 51, 0.35);
 }
 .reward-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 14px;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
     background: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     color: var(--forest-deep);
 }
 .reward-icon svg {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
 }
 .reward-card h3 {
-    font-size: 1.02rem;
+    font-size: 0.96rem;
     font-weight: 700;
     color: var(--forest);
-    margin-bottom: 6px;
+    margin-bottom: 4px;
 }
 .reward-desc {
     color: var(--muted);
-    font-size: 0.86rem;
-    margin-bottom: 16px;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
 }
 .reward-price {
     display: inline-flex;
     align-items: center;
     font-family: "Space Grotesk", sans-serif;
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--forest-deep);
     background: #fff;
-    padding: 6px 14px;
+    padding: 5px 12px;
     border-radius: 100px;
     border: 1px solid var(--line);
 }
