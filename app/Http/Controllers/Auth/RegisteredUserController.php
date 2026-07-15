@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\Validation\ValidationException;
@@ -31,13 +32,13 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name'      => ['required', 'string', 'max:255'],
-            'email'     => ['required', 'email', 'max:255', 'unique:users,email'],
+            'email'     => ['required', 'string', 'email', 'max:255', 'unique:users,email'],
             'phone'     => ['required', 'string', 'max:20'],
             'address'   => ['required', 'string'],
             'password'  => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
-        User::create([
+        $user = User::create([
             'name'          => $request->name,
             'email'         => strtolower($request->email),
             'phone'         => $request->phone,
@@ -51,9 +52,13 @@ class RegisteredUserController extends Controller
             'total_point'   => 0,
         ]);
 
-        return redirect()->route('login')->with(
-            'success',
-            'Pendaftaran berhasil. Silakan login.'
-        );
+        // Kirim email verifikasi
+        event(new Registered($user));
+
+        // Login otomatis
+        Auth::login($user);
+
+        // Arahkan ke halaman verifikasi email
+        return redirect()->route('verification.notice');
     }
 }

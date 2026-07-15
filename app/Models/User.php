@@ -2,18 +2,13 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
-use App\Models\WasteTransaction;
-use App\Models\Redemption;
-use App\Models\Achievement;
-use Database\Factories\UserFactory;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
-    /** @use HasFactory<UserFactory> */
     use HasFactory, Notifiable;
 
     /**
@@ -21,36 +16,20 @@ class User extends Authenticatable
      *
      * @var list<string>
      */
-
-    
-
-    public function wasteTransactions()
-{
-    return $this->hasMany(WasteTransaction::class);
-}
-
-public function redemptions()
-{
-    return $this->hasMany(Redemption::class);
-}
-
-public function achievements()
-{
-    return $this->belongsToMany(Achievement::class);
-}
     protected $fillable = [
-    'name',
-    'email',
-    'password',
-    'phone',
-    'address',
-    'jenis_kelamin',
-    'role',
-    'status',
-    'rank',
-    'current_point',
-    'total_point',
-];
+        'name',
+        'email',
+        'password',
+        'phone',
+        'address',
+        'jenis_kelamin',
+        'role',
+        'status',
+        'rank',
+        'current_point',
+        'total_point',
+    ];
+
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -72,5 +51,29 @@ public function achievements()
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    /**
+     * Relasi ke transaksi sampah.
+     */
+    public function wasteTransactions()
+    {
+        return $this->hasMany(WasteTransaction::class);
+    }
+
+    /**
+     * Relasi ke penukaran.
+     */
+    public function redemptions()
+    {
+        return $this->hasMany(Redemption::class);
+    }
+
+    /**
+     * Relasi ke achievement.
+     */
+    public function achievements()
+    {
+        return $this->belongsToMany(Achievement::class);
     }
 }
