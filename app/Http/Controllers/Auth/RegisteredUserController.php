@@ -52,8 +52,8 @@ class RegisteredUserController extends Controller
             'total_point'   => 0,
         ]);
 
-        // Kirim email verifikasi
-        event(new Registered($user));
+        
+       // event(new Registered($user));
 
         // Login otomatis
         Auth::login($user);
